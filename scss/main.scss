@@ -1,0 +1,299 @@
+@import "https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";
+
+@import "variables";
+
+@import "navigation";
+
+@import "gdpr_consent";
+
+.productGrid .info h1 {
+  font-weight: 600;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+/* OBECNÁ NASTAVENÍ */
+
+a,
+li {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  width: 100%;
+  padding: 8em 0 0 0;
+  margin: 0;
+  background-color: $bodyColor;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+}
+
+*::selection {
+  background-color: rgba(255, 202, 0, 0.5);
+}
+*::-moz-selection {
+  background-color: rgba(255, 202, 0, 0.5);
+}
+
+/* all titles on all the pages */
+.title {
+  display: block;
+  font-weight: 900;
+  width: 100%;
+  padding: 0;
+  font-size: 2em;
+  text-align: left;
+}
+.title:hover {
+  cursor: default;
+}
+.title img {
+  height: 5vh;
+}
+
+/* content wrapper in all the pages */
+.wrapper {
+  max-width: 1200px;
+  padding: 0 4em;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+
+#landing {
+  text-align: center;
+  width: 100% !important;
+  height: 100% !important;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  margin-top: -4em;
+  padding: 6em 0;
+  animation: slideBg 20s linear infinite 0s;
+  animation-timing-function: ease-in-out;
+  background: url("/wp-content/themes/bagrujeu/img/landing-photos/1.jpg");
+}
+
+@keyframes slideBg {
+  0% {
+    background: url("/wp-content/themes/bagrujeu/img/landing-photos/1.jpg");
+  }
+  20% {
+    background: url("/wp-content/themes/bagrujeu/img/landing-photos/2.jpg");
+  }
+  40% {
+    background: url("/wp-content/themes/bagrujeu/img/landing-photos/3.jpg");
+  }
+  60% {
+    background: url("/wp-content/themes/bagrujeu/img/landing-photos/4.jpg");
+  }
+  80% {
+    background: url("/wp-content/themes/bagrujeu/img/landing-photos/5.jpg");
+  }
+  100% {
+    background: url("/wp-content/themes/bagrujeu/img/landing-photos/1.jpg");
+  }
+}
+
+.cell {
+  display: inline-block;
+  transition: 0.3s all ease-in-out;
+  vertical-align: top;
+  margin: 0 1%;
+}
+.cell p {
+  text-align: center;
+  font-size: 1.3em;
+  cursor: default;
+  font-weight: 600;
+}
+.cell div {
+  width: 13em;
+  height: 13em;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: $primary;
+  transition: 0.3s all ease-in-out;
+}
+.cell div:hover {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  cursor: pointer;
+}
+.cell div:hover > img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transition: 0.5s;
+}
+.cell div img {
+  width: 70%;
+  height: 70%;
+  padding: 15%;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+}
+
+#landing .cell {
+  margin-top: 100px;
+}
+#landing .cell div {
+  transform: scale(1);
+}
+#landing .cell div img {
+  transform: scale(1);
+}
+
+#landing .cell:hover div p {
+  transform: scale(1.1);
+}
+
+#landing .cell p {
+  color: black;
+  padding: 0.5em;
+  background: $primary;
+  opacity: 0;
+  transition: 0.3s all ease-out;
+  margin-top: 2em;
+}
+#landing .cell:hover p {
+  opacity: 1;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+}
+
+.productGrid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+.productGrid div:first-child img {
+  width: 100%;
+}
+.productGrid div:first-child #chci-objednat {
+  padding: 0.5em;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: none;
+  background-color: $primary;
+  color: white;
+  font-weight: 600;
+  width: 50%;
+  margin: 0 250 0 25%;
+  font-size: 1em;
+}
+.productGrid div:first-child #chci-objednat:hover {
+  transition: 0.3s;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .productGrid #fotka img,
+  .productGrid .info {
+    width: 100% !important;
+    display: block;
+  }
+}
+
+.content {
+  font-size: 1em !important;
+  font-weight: 400;
+  line-height: 2em;
+}
+.content a {
+  font-weight: 500;
+  color: $primary;
+  transition: 0.3s color;
+}
+.content li {
+  list-style-type: square;
+}
+.content a:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+.content h2 {
+  font-size: 1.5em;
+}
+
+.wpcf7 {
+  display: block;
+  margin: 0 auto;
+}
+.wpcf7 input,
+.wpcf7 textarea,
+.wpcf7 select,
+.wpcf7 button {
+  background: #fff;
+  border: 2px solid black;
+  border-radius: 3px;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  width: 30em;
+}
+.wpcf7 textarea {
+  resize: none;
+}
+.wpcf7 select {
+  cursor: pointer;
+}
+.wpcf select option {
+  background: rgba(255, 202, 0, 1);
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.top-nav-icons {
+  width: 25em;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: flex-end;
+  justify-content: center;
+  padding: 0.5em 1em;
+  border-radius: 30px;
+  display: none;
+}
+.top-nav-icons a img {
+  background: $primary;
+  width: 60%;
+  display: inline-block;
+  padding: 0.3em;
+  border: 2px solid $primary;
+}
+.top-nav-icons a img:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+@media screen and (max-width: 700px) {
+  header span {
+    display: none;
+  }
+  .wrapper {
+    padding: 0 1em;
+  }
+}
