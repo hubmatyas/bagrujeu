@@ -19,14 +19,6 @@ get_header();
 
   <div class="cell">
     <div>
-      <a href="/stavebni-prace/bazeny"><img src="/wp-content/themes/bagrujeu/img/bazen.svg" alt="Bazény - bagruj.eu"></a>
-    </div>
-    <p>Bazény</p>
-  </div>
-
-
-  <div class="cell">
-    <div>
       <a href="/stavebni-prace/obvodove-zdivo-na-klic/"><img src="/wp-content/themes/bagrujeu/img/obvodova-zed.svg" alt="Obvodové zdivo na klíč - bagruj.eu"></a>
     </div>
     <p>Obvodové zdivo<br>na klíč</p>
