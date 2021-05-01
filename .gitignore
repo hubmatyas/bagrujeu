@@ -1,0 +1,2 @@
+# Node modules added to git ignore, you can install them by "npm install"
+/node_modules/
