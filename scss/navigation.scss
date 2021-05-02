@@ -1,98 +1,98 @@
 header {
-  position: fixed;;
+  position: fixed;
   background-color: #fff;
-  top:0;
+  top: 0;
   width: 100%;
   // vertical-align: middle;
   box-sizing: border-box;
   z-index: 999;
 }
-  header .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .logo {
   display: flex;
   align-items: center;
-  justify-content:start;
+  justify-content: start;
   width: auto;
 }
 
 .logo .home-link {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 78px;
 }
 
 .logo-btn {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70px;
-    height: 70px;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-  }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+}
 .logo-btn_burger {
-    width: 55px;
-    height: 15px;
-    background: $primary;
-    transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-  }
-  .logo-btn_burger::before,
-  .logo-btn_burger::after {
-    content: '';
-    position: absolute;
-    width: 55px;
-    height: 15px;
-    background: $primary;
-    transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-  }
-  .logo-btn_burger::before {
-    transform: translateY(-20px);
-    -webkit-transform: translateY(-20px);
-    -moz-transform: translateY(-20px);
-  }
-  .logo-btn_burger::after {
-    transform: translateY(20px);
-    -webkit-transform: translateY(20px);
-    -moz-transform: translateY(20px);
-  }
+  width: 55px;
+  height: 15px;
+  background: $primary;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+}
+.logo-btn_burger::before,
+.logo-btn_burger::after {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 15px;
+  background: $primary;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+}
+.logo-btn_burger::before {
+  transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+}
+.logo-btn_burger::after {
+  transform: translateY(20px);
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+}
 
-  .logo-btn.open .logo-btn_burger {
-    transform: translateX(-50px);
-    -webkit-transform: translateX(-50px);
-    -moz-transform: translateX(-50px);
-    background: transparent;
-  }
-  .logo-btn.open .logo-btn_burger::before,
-  .logo-btn.open .logo-btn_burger::after {
-    background: #000;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-  }
-  .logo-btn.open .logo-btn_burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-    -webkit-transform: rotate(45deg) translate(35px, -35px);
-    -moz-transform: rotate(45deg) translate(35px, -35px);
-  }
-  .logo-btn.open .logo-btn_burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-    -webkit-transform: rotate(-45deg) translate(35px, 35px);
-    -moz-transform: rotate(-45deg) translate(35px, 35px);
-  }
+.logo-btn.open .logo-btn_burger {
+  transform: translateX(-50px);
+  -webkit-transform: translateX(-50px);
+  -moz-transform: translateX(-50px);
+  background: transparent;
+}
+.logo-btn.open .logo-btn_burger::before,
+.logo-btn.open .logo-btn_burger::after {
+  background: #000;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+.logo-btn.open .logo-btn_burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  -webkit-transform: rotate(45deg) translate(35px, -35px);
+  -moz-transform: rotate(45deg) translate(35px, -35px);
+}
+.logo-btn.open .logo-btn_burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  -webkit-transform: rotate(-45deg) translate(35px, 35px);
+  -moz-transform: rotate(-45deg) translate(35px, 35px);
+}
 
-  /* facebook link in hamburger menu */
+/* facebook link in hamburger menu */
 #fb {
   width: 2em;
   display: block;

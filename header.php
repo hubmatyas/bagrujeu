@@ -34,20 +34,18 @@ GitHub Repo: https://github.com/hubmatyas/bagrujeu
   <div class="wrapper">
 
       
-        <!--<img src="/wp-content/themes/bagrujeu/img/logo.svg" alt="" id="logoIcon" onclick="openNav(); return false;">-->
         <div class="logo">
         <div class="logo-btn">
           <div class="logo-btn_burger"></div>
         </div>
         <a href="<?php echo home_url(); ?>" class="home-link">RGC</a>
         </div>
-        <!--<a href="<?php // echo get_home_url(); ?>" class="logoLink"><img src="/wp-content/themes/bagrujeu/img/rgc.svg" alt=""></a>-->
       <style>
    
         </style>
 
       <span class="phone-link">
-        <a href="tel:+420777800001"><img src="/wp-content/themes/bagrujeu/img/phone.svg" alt="Zavolat - RGC" class="phoneHeader"/></a>
+        <a href="tel:+420777800001"><img src="<?php echo get_template_directory_uri(); ?>/img/phone.svg" alt="Zavolat - RGC" class="phoneHeader"/></a>
         <a class="phoneNumber" href="tel:+420777800001">+420 777 800 001</a>
       <span>
   </div>
