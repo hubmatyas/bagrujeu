@@ -1,21 +1,19 @@
-//Javascript
+// Navigation
 
-console.log('main.js has been connected');
+const menuBtn = document.querySelector('.logo-btn');
+let menuOpen = false;
 
-
-function openNav() {
-  var icon = document.getElementById('logoIcon');
-  document.getElementById("mySidenav").style.width = "330px";
-  icon.classList.add("active");
-  console.log('The nav has been opened');
-}
-
-function closeNav() {
-  var icon = document.getElementById('logoIcon')
-  document.getElementById("mySidenav").style.width = "0";
-  icon.classList.remove("active");
-  console.log('The nav has been closed');
-}
+menuBtn.addEventListener('click', () => {
+  if(!menuOpen){
+    menuBtn.classList.add('open');
+    menuOpen = true;
+    document.getElementById("mySidenav").style.width = "330px";
+  } else {
+    menuBtn.classList.remove('open');
+    menuOpen = false;
+    document.getElementById("mySidenav").style.width = "0";
+  }
+})
 
 
 

@@ -1,87 +1,129 @@
 header {
-  height: 6em;
-  width: 100%;
-  position: fixed;
-  top: 0;
+  position: fixed;;
   background-color: #fff;
-  vertical-align: middle;
+  top:0;
+  width: 100%;
+  // vertical-align: middle;
   box-sizing: border-box;
   z-index: 999;
 }
-#logo {
-  width: 12em;
-  height: 8em;
-  margin: 1em 0;
-}
-#logo img {
-  float: left;
-}
-#logo img:nth-child(1) {
-  width: 24%;
-  margin-top: 0.5em;
-  transition: 0.3s;
-}
-#logo #logoIcon:hover {
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  cursor: pointer;
-  filter: brightness(0%);
-  -webkit-filter: brightness(0%);
-  -moz-filter: brightness(0%);
-}
-#logoIcon .active {
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  cursor: pointer;
-  filter: brightness(0%);
-  -webkit-filter: brightness(0%);
-  -moz-filter: brightness(0%);
-}
-#logo img:nth-child(2) {
-  width: 74%;
-  margin-left: 2%;
+  header .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content:start;
+  width: auto;
 }
 
-/* facebook link in hamburger menu */
+.logo .home-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 78px;
+}
+
+.logo-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+  }
+.logo-btn_burger {
+    width: 55px;
+    height: 15px;
+    background: $primary;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+  }
+  .logo-btn_burger::before,
+  .logo-btn_burger::after {
+    content: '';
+    position: absolute;
+    width: 55px;
+    height: 15px;
+    background: $primary;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+  }
+  .logo-btn_burger::before {
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+  }
+  .logo-btn_burger::after {
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+  }
+
+  .logo-btn.open .logo-btn_burger {
+    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    background: transparent;
+  }
+  .logo-btn.open .logo-btn_burger::before,
+  .logo-btn.open .logo-btn_burger::after {
+    background: #000;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+  }
+  .logo-btn.open .logo-btn_burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    -webkit-transform: rotate(45deg) translate(35px, -35px);
+    -moz-transform: rotate(45deg) translate(35px, -35px);
+  }
+  .logo-btn.open .logo-btn_burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    -webkit-transform: rotate(-45deg) translate(35px, 35px);
+    -moz-transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+  /* facebook link in hamburger menu */
 #fb {
   width: 2em;
   display: block;
 }
 
-#logo {
-  display: inline-block;
+.phone-link {
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 .phoneNumber {
   font-size: 1.5em;
   font-weight: 600;
-  display: inline-block;
-  float: right;
   color: #000000;
-  margin-top: 1.5em;
 }
 
 @media screen and (min-width: 700px) {
-  header span:hover .phoneHeader {
+  header .phone-link:hover .phoneHeader {
     filter: brightness(0%);
     -webkit-filter: brightness(0%);
     -moz-filter: brightness(0%);
     -o-filter: brightness(0%);
   }
-  header span:hover .phoneNumber {
+  header .phone-link:hover .phoneNumber {
     color: $primary !important;
   }
 }
 
 .phoneHeader {
-  vertical-align: middle;
-  display: inline-block;
   height: 3em;
-  float: right;
-  margin: 1.8em 0.5em;
+  margin: auto 0.5em;
   filter: brightness(100%);
   -webkit-filter: brightness(100%);
   -moz-filter: brightness(100%);
@@ -90,11 +132,6 @@ header {
 
 @media screen and (max-width: 700px) {
   .phoneHeader {
-    margin-top: 0.75em;
-    display: inline-block;
-    height: 6vh;
-    max-height: 6vh;
-    width: auto;
     padding: 1.5vh 0 1.5vh 1.5vh;
   }
   .phoneNumber {
@@ -103,8 +140,8 @@ header {
 }
 
 #fb {
-  padding: none;
-  margin-top: 5vh;
+  padding: 0;
+  margin-top: 6em;
   filter: brightness(100%);
   -webkit-filter: brightness(100%);
   -moz-filter: brightness(100%);
@@ -121,12 +158,12 @@ header {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
-  z-index: 10000; /* Stay on top */
+  z-index: 900; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   background-color: #fff; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 2em; /* Place content 60px from the top */
+  padding-top: 100px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   font-weight: 300;
 }
@@ -141,62 +178,14 @@ header {
   background-color: white;
   transition: 0.3s;
 }
-.sidenav a:first-child:hover,
+
 .sidenav a:last-child:hover {
   background-color: white;
 }
 .sidenav a:hover {
-  background-color: rgba(255, 202, 0, 0.3);
-}
-.sidenav .closebtn:hover {
-  background-color: white !important;
-}
-
-.sidenav .homeLink {
-  margin-top: 2em;
+  background-color: $primaryHighlight;
 }
 
 .sidenav a:hover {
   color: #000;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 50px;
-  background-color: none !important;
-  font-weight: 600;
-  padding: 0 0.5em;
-}
-
-#main {
-  transition: margin-left 0.5s;
-  padding: 20px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-}
-
-.sidenav #logo {
-  display: block;
-  cursor: pointer;
-  width: 8em;
-  height: 6em;
-  vertical-align: middle;
-}
-.sidenav #logo:nth-child(1) {
-  pointer-events: none;
-}
-
-@media screen and (max-width: 1400px) {
-  .sidenav a:first-child {
-    display: block;
-  }
 }

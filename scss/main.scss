@@ -1,8 +1,8 @@
 @import "https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap";
 
 @import "variables";
 
-@import "navigation";
 
 @import "gdpr_consent";
 
@@ -26,7 +26,7 @@ li {
 
 body {
   width: 100%;
-  padding: 8em 0 0 0;
+  padding: 0;
   margin: 0;
   background-color: $bodyColor;
   font-family: "Rubik", sans-serif;
@@ -34,10 +34,10 @@ body {
 }
 
 *::selection {
-  background-color: rgba(255, 202, 0, 0.5);
+  background-color: $primaryHighlight;
 }
 *::-moz-selection {
-  background-color: rgba(255, 202, 0, 0.5);
+  background-color: $primaryHighlight;
 }
 
 /* all titles on all the pages */
@@ -67,15 +67,15 @@ body {
 }
 
 #landing {
-  text-align: center;
-  width: 100% !important;
-  height: 100% !important;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
   backface-visibility: hidden;
-  margin-top: -4em;
-  padding: 6em 0;
   animation: slideBg 20s linear infinite 0s;
   animation-timing-function: ease-in-out;
   background: url("/wp-content/themes/bagrujeu/img/landing-photos/1.jpg");
@@ -103,10 +103,8 @@ body {
 }
 
 .cell {
-  display: inline-block;
   transition: 0.3s all ease-in-out;
-  vertical-align: top;
-  margin: 0 1%;
+  margin: 0 2em;
 }
 .cell p {
   text-align: center;
@@ -148,9 +146,38 @@ body {
   -o-transform: scale(1);
 }
 
-#landing .cell {
-  margin-top: 100px;
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
 }
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.sidenav #logo {
+  display: block;
+  cursor: pointer;
+  width: 8em;
+  height: 6em;
+  vertical-align: middle;
+}
+.sidenav #logo:nth-child(1) {
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .sidenav a:first-child {
+    display: block;
+  }
+}
+
 #landing .cell div {
   transform: scale(1);
 }
@@ -290,10 +317,12 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-  header span {
+  header .wrapper span {
     display: none;
   }
   .wrapper {
     padding: 0 1em;
   }
 }
+
+@import "navigation";

@@ -32,13 +32,23 @@ GitHub Repo: https://github.com/hubmatyas/bagrujeu
 
 <header>
   <div class="wrapper">
-      <div id="logo">
-        <img id="logoIcon" src="/wp-content/themes/bagrujeu/img/logo.svg" alt="Logo" onclick="openNav()">
-        <img src="/wp-content/themes/bagrujeu/img/rgc.svg" alt="RGC" onclick="location='<?php echo get_home_url(); ?>'" style="cursor: pointer;">
-      </div>
-      <span>
-        <a class="phoneNumber" href="tel:+420777800001">+420 777 800 001</a>
+
+      
+        <!--<img src="/wp-content/themes/bagrujeu/img/logo.svg" alt="" id="logoIcon" onclick="openNav(); return false;">-->
+        <div class="logo">
+        <div class="logo-btn">
+          <div class="logo-btn_burger"></div>
+        </div>
+        <a href="<?php echo home_url(); ?>" class="home-link">RGC</a>
+        </div>
+        <!--<a href="<?php // echo get_home_url(); ?>" class="logoLink"><img src="/wp-content/themes/bagrujeu/img/rgc.svg" alt=""></a>-->
+      <style>
+   
+        </style>
+
+      <span class="phone-link">
         <a href="tel:+420777800001"><img src="/wp-content/themes/bagrujeu/img/phone.svg" alt="Zavolat - RGC" class="phoneHeader"/></a>
+        <a class="phoneNumber" href="tel:+420777800001">+420 777 800 001</a>
       <span>
   </div>
 </header>
@@ -46,7 +56,6 @@ GitHub Repo: https://github.com/hubmatyas/bagrujeu
 <body>
 
   <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a class="homeLink"href="<?php echo get_home_url(); ?>">Domů</a>
     <a href="/stavebni-prace/">Stavební práce</a>
     <a href="/vykopove-prace/">Výkopové práce</a>
