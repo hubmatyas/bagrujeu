@@ -6,7 +6,7 @@ get_header();
 
  ?>
 
-<div id="landing">
+<div id="background-slideshow" class="cell-wrapper">
 
 
 

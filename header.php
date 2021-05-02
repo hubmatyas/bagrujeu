@@ -31,7 +31,7 @@ GitHub Repo: https://github.com/hubmatyas/bagrujeu
 </head>
 
 <header>
-  <div class="wrapper">
+  <div class="wrapper header-wrapper">
 
       
         <div class="logo">
@@ -49,18 +49,18 @@ GitHub Repo: https://github.com/hubmatyas/bagrujeu
         <a class="phoneNumber" href="tel:+420777800001">+420 777 800 001</a>
       <span>
   </div>
+
+  <div class="wrapper navigation-wrapper">
+    <ul class="navigation">
+      <li><a href="<?php echo get_home_url(); ?>">Domů</a></li>
+      <li><a href="/stavebni-prace/">Stavební práce</a></li>
+      <li><a href="/vykopove-prace/">Výkopové práce</a></li>
+      <li><a href="/doprava/">Doprava</a></li>
+      <li><a href="/kontakt/">Kontakt</a></li>
+      <li><a href="/o-nas/">O nás</a></li>
+      <li><a href="https://www.facebook.com/Bagrujeu-365630990898780/">Facebook</a></li>
+    </ul>
+  </div>
 </header>
 
 <body>
-
-  <div id="mySidenav" class="sidenav">
-    <a class="homeLink"href="<?php echo get_home_url(); ?>">Domů</a>
-    <a href="/stavebni-prace/">Stavební práce</a>
-    <a href="/vykopove-prace/">Výkopové práce</a>
-    <a href="/doprava/">Doprava</a>
-    <!-- <a href="/pujcovna/">Půjčovna</a> -->
-    <a href="/kontakt/">Kontakt</a>
-    <a href="/o-nas/">O nás</a>
-    <a href="https://www.facebook.com/Bagrujeu-365630990898780/" target="_blank"><img src="/wp-content/themes/bagrujeu/img/fb.svg" alt="Facebook" id="fb"></a>
-
-  </div>

@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 </div>
 
-    <div id="landing">
+    <div id="background-slideshow" class="cell-wrapper">
 
       <div class="cell">
         <div>
