@@ -1,20 +1,19 @@
 // OnLoad get body padding top same as header height
 
-window.onload = () => {
   var headerHeight;
   var header = document.querySelector('header');
   
   if(header.offsetHeight) {
       headerHeight=header.offsetHeight;
       document.querySelector('body').style.paddingTop = headerHeight;
+      console.log(headerHeight);
   
   } else if(header.style.pixelHeight) {
       headerHeight=header.style.pixelHeight;
       document.querySelector('body').style.paddingTop = headerHeight;
-      
+      console.log(headerHeight);
   }
   
-}
 
 
 // Navigation
