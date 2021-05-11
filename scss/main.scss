@@ -209,7 +209,7 @@ body {
   cursor: pointer;
 }
 
-@media screen and (max-width: 700px) {
+@media only screen and (max-width: 700px) {
   .productGrid #fotka img,
   .productGrid .info {
     width: 100% !important;
@@ -293,10 +293,7 @@ body {
   border: 2px solid black;
 }
 
-@media screen and (max-width: 700px) {
-  header .wrapper span {
-    display: none;
-  }
+@media only screen and (max-width: 700px) {
   .wrapper {
     padding: 0 1em;
   }
