@@ -6,14 +6,11 @@
   if(header.offsetHeight) {
       headerHeight=header.offsetHeight;
       headerHeight = headerHeight - 15;
-      document.querySelector('body').style.paddingTop = headerHeight;
-      console.log('Header height is ' + headerHeight + ' px. Body element adjusted and has padding of the same value, due to header fix position.');
-  
+      document.querySelector('body').style.paddingTop = headerHeight;  
   } else if(header.style.pixelHeight) {
       headerHeight=header.style.pixelHeight;
       headerHeight = headerHeight - 15;
       document.querySelector('body').style.paddingTop = headerHeight;
-      console.log('Header height is ' + headerHeight + ' px. Body element adjusted and has padding of the same value, due to header fix position.');
   }
   
 
