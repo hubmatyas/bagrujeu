@@ -6,7 +6,7 @@
 
 @import "gdpr_consent";
 
-.productGrid .info h1 {
+.product-wrapper .info h1 {
   font-weight: 600;
 }
 
@@ -66,18 +66,19 @@ body {
   box-sizing: border-box;
 }
 
+.content-wrapper {
+  padding: 1em 4em;
+}
+
 .cell-wrapper {
   padding-top: 16em;
   display: flex;
   align-items: flex-start;
   width: 100%;
-  height: 100%;
   justify-content: center;
 }
 
 #background-slideshow {
-  background-size: cover;
-  background-repeat: no-repeat;
   backface-visibility: hidden;
   animation: slideBg 30s linear infinite 0s;
   animation-timing-function: ease-in-out;
@@ -88,33 +89,39 @@ body {
 @keyframes slideBg {
   0% {
     background: url("/wp-content/themes/bagrujeu/img/landing-photos/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   20% {
     background: url("/wp-content/themes/bagrujeu/img/landing-photos/2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   40% {
     background: url("/wp-content/themes/bagrujeu/img/landing-photos/3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   60% {
     background: url("/wp-content/themes/bagrujeu/img/landing-photos/4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   80% {
     background: url("/wp-content/themes/bagrujeu/img/landing-photos/5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   100% {
     background: url("/wp-content/themes/bagrujeu/img/landing-photos/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
 .cell {
   transition: 0.3s all ease-in-out;
   margin: 0 2em;
-}
-.cell p {
-  text-align: center;
-  font-size: 1.3em;
-  cursor: default;
-  font-weight: 600;
 }
 .cell div {
   width: 13em;
@@ -162,47 +169,64 @@ body {
   transform: scale(1);
 }
 
-.cell-wrapper .cell:hover div p {
-  transform: scale(1.1);
-}
-
 .cell-wrapper .cell p {
   color: black;
   padding: 0.5em;
   background: $primary;
   opacity: 0;
   transition: 0.3s all ease-out;
-  margin-top: 2em;
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 600;
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 .cell-wrapper .cell:hover p {
   opacity: 1;
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
 }
 
-.productGrid {
-  display: grid;
+.product-wrapper {
+  margin-top: 4em;
+  display: flex;
   width: 100%;
-  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-between;
 }
-.productGrid div:first-child img {
+
+.product-wrapper .product-photo, .product-wrapper .product-info {
+  width: 50%;
+}
+.product-wrapper .product-photo img {
   width: 100%;
 }
-.productGrid div:first-child #chci-objednat {
-  padding: 0.5em;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
+
+.product-info p {
+  margin: 0;
+}
+.product-wrapper .product-photo #chci-objednat {
+  padding: .7em 2em;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
   border: none;
   background-color: $primary;
   color: white;
   font-weight: 600;
+  display: block;
   width: 50%;
-  margin: 0 250 0 25%;
+  margin: 0 auto;
   font-size: 1em;
 }
-.productGrid div:first-child #chci-objednat:hover {
+.product-wrapper .product-photo #chci-objednat:hover {
   transition: 0.3s;
   background-color: black;
   color: white;
@@ -210,8 +234,8 @@ body {
 }
 
 @media only screen and (max-width: 700px) {
-  .productGrid #fotka img,
-  .productGrid .info {
+  .product-wrapper #fotka img,
+  .product-wrapper .info {
     width: 100% !important;
     display: block;
   }
@@ -293,8 +317,62 @@ body {
   border: 2px solid black;
 }
 
+@media only screen and (max-width: 1050px) {
+  .cell-wrapper {
+    flex-wrap: wrap;
+    padding-top: 8em;
+  }
+  .cell div {
+    width: 16em;
+    height: 16em;
+  }
+}
+
 @media only screen and (max-width: 700px) {
+  .product-wrapper {
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 2em 0;
+  }
+  .product-wrapper .product-photo, .product-wrapper .product-info {
+    display: block;
+    width: 100%;
+  }
+  .product-wrapper .product-photo #chci-objednat {
+    width: 70%;
+  }
   .wrapper {
     padding: 0 1em;
+  }
+
+  .content-wrapper {
+    padding: 1em;
+  }
+
+  #background-slideshow {
+    background: none;
+    animation: none;
+  }
+  .cell-wrapper {
+    padding-top: 4em;
+    display: block;
+    min-height: 100vh;
+  }
+
+  .cell div {
+    width: 16em;
+    height: 16em;
+    margin: 0 auto;
+  }
+
+  .cell * {
+    pointer-events: none;
+  }
+
+  .cell-wrapper .cell p {
+    display: block;
+    opacity: 1;
+    width: 13em;
+    margin: 1em auto 2em auto;;
   }
 }

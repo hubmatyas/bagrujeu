@@ -16,38 +16,40 @@ GitHub Repo: https://github.com/hubmatyas/bagrujeu
 -->
 
 <head>
-<meta charset="utf-8">
-<title>
-	<?php if(is_front_page()){
-        echo "bagruj.eu | Volné termíny ještě 2021! | bagruj.eu";
-    } else{
-        wp_title(''); echo ' | ';  bloginfo( 'name' );
-    }?>
-</title>
+  <meta charset="utf-8">
+  <title>
+    <?php if (is_front_page()) {
+      echo "bagruj.eu | Volné termíny ještě 2021! | bagruj.eu";
+    } else {
+      wp_title('');
+      echo ' | ';
+      bloginfo('name');
+    } ?>
+  </title>
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="author" content="Matyáš Hub">
-  <?php wp_head();?>
+
+
+  <?php wp_head(); ?>
 </head>
 
 <header>
   <div class="wrapper header-wrapper">
 
-      
-        <div class="logo">
-        <div class="logo-btn">
-          <div class="logo-btn_burger"></div>
-        </div>
-        <a href="<?php echo home_url(); ?>" class="home-link">RGC</a>
-        </div>
-      <style>
-   
-        </style>
 
-      <span class="phone-link">
-        <a href="tel:+420777800001"><img src="<?php echo get_template_directory_uri(); ?>/img/phone.svg" alt="Zavolat - RGC" class="phoneHeader"/></a>
-        <a class="phoneNumber" href="tel:+420777800001">+420 777 800 001</a>
-      <span>
+    <div class="logo">
+      <div class="logo-btn">
+        <div class="logo-btn_burger"></div>
+      </div>
+      <a href="<?php echo home_url(); ?>" class="home-link">RGC</a>
+    </div>
+
+
+    <a class="phone-link" href="tel:+420777800001">
+      <span><img src="<?php echo get_template_directory_uri(); ?>/img/phone.svg" alt="Zavolat - RGC" class="phoneHeader" /></span>
+      <span class="phoneNumber" href="tel:+420777800001">+420 777 800 001</span>
+  </a>
   </div>
 
   <div class="wrapper navigation-wrapper">

@@ -5,16 +5,7 @@
 
 get_header(); ?>
 
-<div class="wrapper">
-
-  <div class="top-nav-icons">
-    <a><img src="/wp-content/themes/bagrujeu/img/zakladove-desky.svg" alt="icon"></a>
-    <a><img src="/wp-content/themes/bagrujeu/img/vykopove-prace.svg" alt="icon"></a>
-    <a><img src="/wp-content/themes/bagrujeu/img/dodavka.svg" alt="icon"></a>
-    <a><img src="/wp-content/themes/bagrujeu/img/pujcovna.svg" alt="icon"></a>
-  </div>
-
-
+<div class="wrapper content-wrapper">
 
   <h1 class="title"><?php the_title(); ?></h1>
 

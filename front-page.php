@@ -1,36 +1,45 @@
 
 <?php get_header(); ?>
-</div>
 
-    <div id="background-slideshow" class="cell-wrapper">
 
-      <div class="cell">
+<script>
+  var body = document.body;
+  function setBodyAnimation() {
+    body.setAttribute("id", "background-slideshow");
+  };
+  body.onload = setBodyAnimation();
+  window.onresize = setBodyAnimation();
+</script>
+
+    <div class="cell-wrapper">
+
+      <a class="cell" href="/stavebni-prace/">
         <div>
-          <a href="/stavebni-prace/"><img src="/wp-content/themes/bagrujeu/img/zakladove-desky.svg" alt="Základové desky - bagruj.eu"></a>
-          <p>Stavební práce</p>
+          <img src="/wp-content/themes/bagrujeu/img/zakladove-desky.svg" alt="Základové desky - bagruj.eu">
         </div>
-      </div>
+        <p>Stavební práce</p>
+      </a>
 
-      <div class="cell">
+      <a class="cell" href="/vykopove-prace/">
         <div>
-          <a href="/vykopove-prace/"><img src="/wp-content/themes/bagrujeu/img/vykopove-prace.svg" alt="Výkopové práce - bagruj.eu"></a>
-          <p>Výkopové práce</p>
+          <img src="/wp-content/themes/bagrujeu/img/vykopove-prace.svg" alt="Výkopové práce - bagruj.eu">
         </div>
-      </div>
+        <p>Výkopové práce</p>
+      </a>
 
-      <div class="cell">
+      <a class="cell" href="/doprava/">
         <div>
-          <a href="/doprava/"><img src="/wp-content/themes/bagrujeu/img/dodavka.svg" alt="Doprava - bagruj.eu"></a>
-          <p>Doprava</p>
+          <img src="/wp-content/themes/bagrujeu/img/dodavka.svg" alt="Doprava - bagruj.eu">
         </div>
-      </div>
+        <p>Doprava</p>
+      </a>
 
-      <div class="cell">
+      <a class="cell" href="/stavebni-prace/bazeny">
        <div>
-         <a href="/stavebni-prace/bazeny"><img src="/wp-content/themes/bagrujeu/img/bazen.svg" alt="Bazény - bagruj.eu"></a>
-         <p>Bazény</p>
+         <img src="/wp-content/themes/bagrujeu/img/bazen.svg" alt="Bazény - bagruj.eu">
         </div>
-      </div>
+        <p>Bazény</p>
+      </a>
 
       <!-- Půjčovna jde prozatím pryč
 

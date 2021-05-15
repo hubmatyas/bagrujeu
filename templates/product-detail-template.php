@@ -8,14 +8,14 @@ get_header();
 
 <div class="wrapper">
 
-  <div class="productGrid">
+  <div class="product-wrapper">
 
-    <div id="fotka">
+    <div class="product-photo">
 	     <img src="<?php the_post_thumbnail_url(); ?>" style="width: 100%;height: auto;" />
        <a href="/kontakt/napiste-nam/"><button id="chci-objednat">Přejít na objednávku</button></a>
      </div>
 
-	    <div class="info">
+	    <div class="product-info">
         <h1 class="title"><?php the_title(); ?></h1>
 
         <div class="content">

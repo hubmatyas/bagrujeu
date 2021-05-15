@@ -4,32 +4,42 @@
 
 get_header();
 
- ?>
+?>
 
-<div id="background-slideshow" class="cell-wrapper">
+<script>
+  var body = document.body;
+  function setBodyAnimation() {
+    body.setAttribute("id", "background-slideshow");
+  };
+  body.onload = setBodyAnimation();
+  window.onresize = setBodyAnimation();
+</script>
+
+
+<div class="cell-wrapper">
 
 
 
-  <div class="cell">
+  <a class="cell" href="/stavebni-prace/zakladove-desky/">
     <div>
-      <a href="/stavebni-prace/zakladove-desky/"><img src="/wp-content/themes/bagrujeu/img/zakladova-deska.svg" alt="Základové desky - bagruj.eu"></a>
-    </div>
-    <p>Základové desky<br>na klíč</p>
-  </div>
+      <img src="/wp-content/themes/bagrujeu/img/zakladova-deska.svg" alt="Základové desky - bagruj.eu">
+</div>
+<p>Základové desky<br>na klíč</p>
+</a>
 
-  <div class="cell">
-    <div>
-      <a href="/stavebni-prace/obvodove-zdivo-na-klic/"><img src="/wp-content/themes/bagrujeu/img/obvodova-zed.svg" alt="Obvodové zdivo na klíč - bagruj.eu"></a>
-    </div>
-    <p>Obvodové zdivo<br>na klíč</p>
+<a class="cell" href="/stavebni-prace/obvodove-zdivo-na-klic/">
+  <div>
+    <img src="/wp-content/themes/bagrujeu/img/obvodova-zed.svg" alt="Obvodové zdivo na klíč - bagruj.eu">
   </div>
+  <p>Obvodové zdivo<br>na klíč</p>
+</a>
 
-  <div class="cell">
-    <div>
-      <a href="/stavebni-prace/dlazba-na-klic/"><img src="/wp-content/themes/bagrujeu/img/dlazba.svg" alt="Dlažba na klíč - bagruj.eu"></a>
-    </div>
-    <p>Pochozí a&nbsp;pojezdové<br>plochy na klíč</p>
+<a class="cell" href="/stavebni-prace/dlazba-na-klic/">
+  <div>
+    <img src="/wp-content/themes/bagrujeu/img/dlazba.svg" alt="Dlažba na klíč - bagruj.eu">
   </div>
+  <p>Pochozí a&nbsp;pojezdové<br>plochy na klíč</p>
+</a>
 
 
 
