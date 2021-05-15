@@ -27,11 +27,11 @@ get_header();
 <p>Základové desky<br>na klíč</p>
 </a>
 
-<a class="cell" href="/stavebni-prace/obvodove-zdivo-na-klic/">
+<a class="cell" href="/stavebni-prace/zdeni/">
   <div>
-    <img src="/wp-content/themes/bagrujeu/img/obvodova-zed.svg" alt="Obvodové zdivo na klíč - bagruj.eu">
+    <img src="/wp-content/themes/bagrujeu/img/obvodova-zed.svg" alt="Zdění - bagruj.eu">
   </div>
-  <p>Obvodové zdivo<br>na klíč</p>
+  <p>Zdění</p>
 </a>
 
 <a class="cell" href="/stavebni-prace/dlazba-na-klic/">

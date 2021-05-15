@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="wrapper">
+<div class="wrapper content-wrapper">
   <h1 class="title">Něco se pokazilo.</h1>
 
 
