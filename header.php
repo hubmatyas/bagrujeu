@@ -60,7 +60,7 @@ GitHub Repo: https://github.com/hubmatyas/bagrujeu
       <li><a href="/doprava/">Doprava</a></li>
       <li><a href="/kontakt/">Kontakt</a></li>
       <li><a href="/o-nas/">O nás</a></li>
-      <li><a href="https://www.facebook.com/Bagrujeu-365630990898780/">Facebook</a></li>
+      <li><a href="https://www.facebook.com/Bagrujeu-365630990898780/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
     </ul>
   </div>
 </header>
