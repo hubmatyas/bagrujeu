@@ -3,8 +3,9 @@
 
 @import "variables";
 @import "navigation";
-
+@import "form";
 @import "gdpr_consent";
+
 
 .product-wrapper .info h1 {
   font-weight: 600;
@@ -251,6 +252,12 @@ body {
   color: $primary;
   transition: 0.3s color;
 }
+.content a::selection {
+  color: #000;
+}
+.content a::-moz-selection {
+  color: #000;
+}
 .content li {
   list-style-type: square;
 }
@@ -260,61 +267,6 @@ body {
 }
 .content h2 {
   font-size: 1.5em;
-}
-
-.wpcf7 {
-  display: block;
-  margin: 0 auto;
-}
-.wpcf7 input,
-.wpcf7 textarea,
-.wpcf7 select,
-.wpcf7 button {
-  background: #fff;
-  border: 2px solid black;
-  border-radius: 3px;
-  margin-top: 0.5em;
-  padding: 0.5em;
-  width: 30em;
-}
-.wpcf7 textarea {
-  resize: none;
-}
-.wpcf7 select {
-  cursor: pointer;
-}
-.wpcf select option {
-  background: rgba(255, 202, 0, 1);
-  color: #fff;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-}
-
-.top-nav-icons {
-  width: 25em;
-  box-sizing: border-box;
-  text-align: center;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  flex-direction: flex-end;
-  justify-content: center;
-  padding: 0.5em 1em;
-  border-radius: 30px;
-  display: none;
-}
-.top-nav-icons a img {
-  background: $primary;
-  width: 60%;
-  display: inline-block;
-  padding: 0.3em;
-  border: 2px solid $primary;
-}
-.top-nav-icons a img:hover {
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  cursor: pointer;
-  border: 2px solid black;
 }
 
 @media only screen and (max-width: 1050px) {

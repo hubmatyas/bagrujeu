@@ -134,6 +134,9 @@ header .header-wrapper {
   -moz-filter: brightness(100%);
   -o-filter: brightness(100%);
 }
+.phoneHeader img {
+  width: 100%;
+}
 
 @media screen and (max-width: 700px) {
   .phoneHeader {

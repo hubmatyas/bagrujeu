@@ -1,4 +1,4 @@
-<html lang="cs_cz" dir="ltr">
+<html lang="cs" dir="ltr">
 
 <!--
 

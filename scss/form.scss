@@ -1,0 +1,49 @@
+
+.wpcf7-form {
+    display: block;
+    width: 30em;
+    margin: 0 auto;
+  }
+  .wpcf7 input,
+  .wpcf7 textarea,
+  .wpcf7 select,
+  .wpcf7 button {
+    border: 1px solid black;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    margin-top: 0.5em;
+    padding: 0.5em;
+    width: 100%;
+    background: transparent;
+  }
+  .wpcf7 textarea {
+    resize: none;
+  }
+  .wpcf7 select {
+    cursor: pointer;
+  }
+  .wpcf select option {
+    background: rgba(255, 202, 0, 1);
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  }
+  .wpcf7 .wpcf7-submit {
+    color: #000;
+    background: $primary;
+    display: block;
+    width: 70%;
+    margin: 2em auto;
+    border: none;
+    font-size: 1em;
+    font-weight: 800;
+  }
+  :focus-visible {
+      outline: none;
+  }
+
+  @media screen and (max-width: 38em) {
+    .wpcf7-form {
+        width: 100%;
+    }
+  }
