@@ -67,12 +67,6 @@ header .header-wrapper {
   -webkit-transform: translateY(20px);
   -moz-transform: translateY(20px);
 }
-.logo-btn:hover .logo-btn_burger,
-.logo-btn:hover .logo-btn_burger::before,
-.logo-btn:hover .logo-btn_burger::after {
-  background: #000;
-}
-
 .logo-btn.open .logo-btn_burger {
   transform: translateX(-50px);
   -webkit-transform: translateX(-50px);
@@ -211,5 +205,59 @@ header .header-wrapper {
   }
   .navigation li a:hover {
     background: $primaryHighlight;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .logo .home-link {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 54px;
+  }
+  
+  .logo-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+  }
+  .logo-btn_burger {
+    width: 36.6px;
+    height: 10px;
+    background: $primary;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+  }
+  .logo-btn_burger::before,
+  .logo-btn_burger::after {
+    content: "";
+    position: absolute;
+    width: 36.6px;
+    height: 10px;
+    background: $primary;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+  }
+  .logo-btn_burger::before {
+    transform: translateY(-14px);
+    -webkit-transform: translateY(-14px);
+    -moz-transform: translateY(-14px);
+  }
+  .logo-btn_burger::after {
+    transform: translateY(14px);
+    -webkit-transform: translateY(14px);
+    -moz-transform: translateY(14px);
+  }
+  .phoneHeader {
+    height: 46px;
+
   }
 }
