@@ -14,13 +14,6 @@
 
     <div class="cell-wrapper">
 
-      <a class="cell" href="/stavebni-prace/">
-        <div>
-          <img src="/wp-content/themes/bagrujeu/img/zakladove-desky.svg" alt="Základové desky - bagruj.eu">
-        </div>
-        <p>Stavební práce</p>
-      </a>
-
       <a class="cell" href="/vykopove-prace/">
         <div>
           <img src="/wp-content/themes/bagrujeu/img/vykopove-prace.svg" alt="Výkopové práce - bagruj.eu">
@@ -33,13 +26,6 @@
           <img src="/wp-content/themes/bagrujeu/img/dodavka.svg" alt="Doprava - bagruj.eu">
         </div>
         <p>Doprava</p>
-      </a>
-
-      <a class="cell" href="/stavebni-prace/bazeny">
-       <div>
-         <img src="/wp-content/themes/bagrujeu/img/bazen.svg" alt="Bazény - bagruj.eu">
-        </div>
-        <p>Bazény</p>
       </a>
 
       <!-- Půjčovna jde prozatím pryč

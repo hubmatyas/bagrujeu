@@ -68,7 +68,6 @@
 		<div class="wrapper navigation-wrapper">
 			<ul class="navigation">
 				<li><a href="<?php echo get_home_url(); ?>">Domů</a></li>
-				<li><a href="/stavebni-prace/">Stavební práce</a></li>
 				<li><a href="/vykopove-prace/">Výkopové práce</a></li>
 				<li><a href="/doprava/">Doprava</a></li>
 				<li><a href="/kontakt/">Kontakt</a></li>
